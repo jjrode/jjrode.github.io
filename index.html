@@ -2,10 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Jrode</title>
-    <link rel="icon" href="icon.gif" type="image/gif" />
+    <meta name="description" content="Jrode's links.">
     <link rel="canonical" href="https://jrode.net/" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="icon.gif" type="image/gif" />
+
+    <!-- Open Graph (link previews on Facebook, LinkedIn, Discord, Slack, iMessage, etc.) -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Jrode">
+    <meta property="og:title" content="Jrode">
+    <meta property="og:description" content="Jrode's links.">
+    <meta property="og:url" content="https://jrode.net/">
+    <meta property="og:image" content="https://jrode.net/preview.png">
+    <meta property="og:image:alt" content="Jrode">
+
+    <!-- Twitter / X card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jrode">
+    <meta name="twitter:description" content="Jrode's links.">
+    <meta name="twitter:image" content="https://jrode.net/preview.png">
+
     <style>
       html, body {
         margin: 0;
@@ -13,13 +30,22 @@
         height: 100%;
       }
       iframe {
+        display: block;      /* removes the small gap inline iframes leave below them */
         width: 100%;
-        height: 100%;
+        height: 100vh;       /* fallback for older browsers */
+        height: 100dvh;      /* correct height on mobile, accounting for browser toolbars */
         border: none;
       }
     </style>
   </head>
   <body>
-    <iframe src="https://bio.link/jrode"></iframe>
+    <iframe
+      src="https://bio.link/jrode"
+      title="Jrode links"
+      referrerpolicy="strict-origin-when-cross-origin"
+    >
+      <!-- Fallback for crawlers and browsers that don't render iframes -->
+      <a href="https://bio.link/jrode">Jrode's links</a>
+    </iframe>
   </body>
 </html>
